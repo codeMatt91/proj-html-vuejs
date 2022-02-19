@@ -7,9 +7,7 @@
         v-for="(card, i) in cards"
         :key="i"
       >
-        <i class="fas fa-road fa-2x pb-3"></i>
-        <h3 class="fw-bold">{{ card.heading }}</h3>
-        <div>{{ card.text }}</div>
+        <Card :card="card" />
       </div>
     </div>
   </div>
@@ -17,10 +15,12 @@
 
 <script>
 import Heading from "./Heading.vue";
+import Card from "./Card.vue";
 export default {
   name: "Seotemplate",
   components: {
     Heading,
+    Card,
   },
   props: ["seo"],
   data() {

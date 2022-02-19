@@ -1,14 +1,14 @@
 <template>
   <div class="text-center py-5 d-flex flex-column align-items-center">
-    <h2 class="w-50 fw-bold">{{ seotitle }}</h2>
-    <div class="text">{{ seosub }}</div>
+    <h2 class="w-50 fw-bold">{{ seotitle || servicetitle }}</h2>
+    <div class="text w-50">{{ seosub || servicesub }}</div>
   </div>
 </template>
 
 <script>
 export default {
   name: "Heading",
-  props: ["seotitle", "seosub"],
+  props: ["seotitle", "seosub", "servicetitle", "servicesub"],
 };
 </script>
 
