@@ -7,7 +7,7 @@
       />
       <div class="cards d-flex justify-content-around">
         <div
-          class="card text-center border-0 p-5 mx-3"
+          class="card text-center border-0 mx-3"
           v-for="(card, i) in service.cards"
           :key="i"
         >
@@ -47,5 +47,6 @@ export default {
 }
 .card {
   background-color: $lucky-point;
+  padding: 30px;
 }
 </style>
