@@ -1,0 +1,15 @@
+.btn {
+  border-radius: 20px;
+  color: white;
+  margin: 5px;
+  &:hover {
+    color: $t-white;
+    filter: opacity(0.8);
+  }
+}
+.btn-orange {
+  background-color: $yellow-orange;
+}
+.btn-blu {
+  background-color: $science-blu;
+}

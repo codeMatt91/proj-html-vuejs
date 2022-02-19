@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header />
+    <Header :navigations="navs" />
     <Main />
     <Footer />
   </div>
@@ -19,7 +19,22 @@ export default {
     Footer,
   },
   data() {
-    return {};
+    return {
+      navs: [
+        { link: "#", text: "Home", hasClass: true },
+        { link: "#", text: "Who We Do", hasClass: true },
+        { link: "#", text: "What We Do", hasClass: true },
+        { link: "#", text: "Where We Work", hasClass: true },
+        { link: "#", text: "Careers", hasClass: true },
+        { link: "#", text: "News", hasClass: true },
+        { link: "#", text: "GET IN TOUCH NOW", hasClass: true },
+      ],
+      headingFooter: {
+        title: "Start Your Free Consultation",
+        subTitle:
+          "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+      },
+    };
   },
 };
 </script>
