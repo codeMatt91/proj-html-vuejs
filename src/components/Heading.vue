@@ -1,7 +1,11 @@
 <template>
   <div class="text-center py-5 d-flex flex-column align-items-center">
-    <h2 class="w-50 fw-bold">{{ seotitle || servicetitle || worktitle }}</h2>
-    <div class="text w-50">{{ seosub || servicesub || worksub }}</div>
+    <h2 class="w-50 fw-bold">
+      {{ seotitle || servicetitle || worktitle || planstitle }}
+    </h2>
+    <div class="text w-50">
+      {{ seosub || servicesub || worksub || planssub }}
+    </div>
   </div>
 </template>
 
@@ -15,6 +19,8 @@ export default {
     "servicesub",
     "worktitle",
     "worksub",
+    "planstitle",
+    "planssub",
   ],
 };
 </script>

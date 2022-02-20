@@ -3,6 +3,7 @@
     <Seotemplate :seo="dataSeo" />
     <Service :service="dataService" />
     <Work :work="dataWork" />
+    <Plans :plans="dataPlans" />
   </main>
 </template>
 
@@ -10,12 +11,15 @@
 import Seotemplate from "./Seotemplate";
 import Service from "./Service.vue";
 import Work from "./Work.vue";
+import Plans from "./Plans.vue";
+
 export default {
   name: "Main",
   components: {
     Seotemplate,
     Service,
     Work,
+    Plans,
   },
   data() {
     return {
@@ -94,6 +98,22 @@ export default {
           },
           {
             link: "case-study-gallery-6-1-400x300.jpg",
+          },
+        ],
+      },
+      dataPlans: {
+        title: "Our Plans",
+        subtitle:
+          "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+        cards: [
+          { title: "Standard", price: 19, project: 5, storage: 5 },
+          { title: "Premium", price: 29, project: 10, storage: 15 },
+          { title: "Professional", price: 39, project: 15, storage: 30 },
+          {
+            title: "Extreme",
+            price: 59,
+            project: "Unlimited",
+            storage: "Unlimited",
           },
         ],
       },
