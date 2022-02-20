@@ -4,6 +4,7 @@
     <Service :service="dataService" />
     <Work :work="dataWork" />
     <Plans :plans="dataPlans" />
+    <News :news="dataNews"/>
   </main>
 </template>
 
@@ -12,6 +13,7 @@ import Seotemplate from "./Seotemplate";
 import Service from "./Service.vue";
 import Work from "./Work.vue";
 import Plans from "./Plans.vue";
+import News from "./News.vue";
 
 export default {
   name: "Main",
@@ -20,13 +22,12 @@ export default {
     Service,
     Work,
     Plans,
+    News,
   },
   data() {
     return {
       dataSeo: {
         title: "Meet The New Agency SEO Template From The Avada Team",
-        subtitle:
-          "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
         cards: [
           {
             icon: "fa-road",
@@ -47,8 +48,6 @@ export default {
       },
       dataService: {
         title: "See Our Top Notch Services",
-        subtitle:
-          "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
         cards: [
           {
             icon: "fa-road",
@@ -78,8 +77,6 @@ export default {
       },
       dataWork: {
         title: "Our Work",
-        subtitle:
-          "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
         images: [
           {
             link: "case-study-gallery-3-1-400x300.jpg",
@@ -103,8 +100,6 @@ export default {
       },
       dataPlans: {
         title: "Our Plans",
-        subtitle:
-          "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
         cards: [
           { title: "Standard", price: 19, project: 5, storage: 5 },
           { title: "Premium", price: 29, project: 10, storage: 15 },
@@ -117,6 +112,14 @@ export default {
           },
         ],
       },
+      dataNews:{
+        title: "Our News",
+        cards:[
+          {src:"related-service-2-320x202.jpg", heading:"Why You Need A SEO Agency Now"},
+          {src:"related-service-4-320x202", heading:"SEO Tips For Your Startup"},
+          {src:"", heading:"Image Optimization For Your Site"},
+        ]
+      }
     };
   },
 };

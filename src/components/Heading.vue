@@ -1,10 +1,11 @@
 <template>
   <div class="text-center py-5 d-flex flex-column align-items-center">
     <h2 class="w-50 fw-bold">
-      {{ seotitle || servicetitle || worktitle || planstitle }}
+      {{ seotitle || servicetitle || worktitle || planstitle || newstitle }}
     </h2>
     <div class="text w-50">
-      {{ seosub || servicesub || worksub || planssub }}
+      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+      doloremque laudantium.
     </div>
   </div>
 </template>
@@ -12,16 +13,7 @@
 <script>
 export default {
   name: "Heading",
-  props: [
-    "seotitle",
-    "seosub",
-    "servicetitle",
-    "servicesub",
-    "worktitle",
-    "worksub",
-    "planstitle",
-    "planssub",
-  ],
+  props: ["seotitle", "servicetitle", "worktitle", "planstitle", "newstitle"],
 };
 </script>
 

@@ -12,10 +12,10 @@
           v-for="(card, i) in plans.cards"
           :key="i"
         >
-          <h4 class="fw-bold pb-4">{{ card.title }}</h4>
+          <h4 class="fw-bold py-3">{{ card.title }}</h4>
           <div
             id="price"
-            class="position-relative d-flex justify-content-center"
+            class="position-relative d-flex justify-content-center py-3"
           >
             <div class="position-relative">
               <div class="dollar position-absolute">$</div>
