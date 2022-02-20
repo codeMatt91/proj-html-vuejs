@@ -1,13 +1,15 @@
 <template>
-  <div class="container h-100">
-    <Heading :seotitle="seoTitle" :seosub="seoSub" class="my-5" />
-    <div class="cards d-flex justify-content-around">
-      <div
-        class="card text-center border-0 px-5"
-        v-for="(card, i) in cards"
-        :key="i"
-      >
-        <Card :card="card" />
+  <div class="seo">
+    <div class="container h-100">
+      <Heading :seotitle="seoTitle" :seosub="seoSub" class="my-5" />
+      <div class="cards d-flex justify-content-between">
+        <div
+          class="card text-center border-0 p-5"
+          v-for="(card, i) in cards"
+          :key="i"
+        >
+          <Card :card="card" />
+        </div>
       </div>
     </div>
   </div>
@@ -47,11 +49,15 @@ export default {
 <style scoped lang="scss">
 @import "../assets/scss/_vars.scss";
 @import "../assets/scss/_utils.scss";
+
 .container {
   padding-bottom: 400px;
   background-image: url("../assets/images/agency-seo-desk-front-800x380.jpg");
   background-repeat: no-repeat;
   background-position: bottom;
+}
+.seo {
+  background-color: $alabaster;
 }
 .fas {
   color: $yellow-orange;

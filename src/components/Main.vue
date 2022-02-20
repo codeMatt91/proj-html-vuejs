@@ -4,7 +4,7 @@
     <Service :service="dataService" />
     <Work :work="dataWork" />
     <Plans :plans="dataPlans" />
-    <News :news="dataNews"/>
+    <News :news="dataNews" />
   </main>
 </template>
 
@@ -112,14 +112,23 @@ export default {
           },
         ],
       },
-      dataNews:{
+      dataNews: {
         title: "Our News",
-        cards:[
-          {src:"related-service-2-320x202.jpg", heading:"Why You Need A SEO Agency Now"},
-          {src:"related-service-4-320x202", heading:"SEO Tips For Your Startup"},
-          {src:"", heading:"Image Optimization For Your Site"},
-        ]
-      }
+        cards: [
+          {
+            src: "related-service-2-320x202.jpg",
+            heading: "Why You Need A SEO Agency Now",
+          },
+          {
+            src: "related-service-4-320x202.jpg",
+            heading: "SEO Tips For Your Startup",
+          },
+          {
+            src: "blog-post-6-320x202.jpg",
+            heading: "Image Optimization For Your Site",
+          },
+        ],
+      },
     };
   },
 };
