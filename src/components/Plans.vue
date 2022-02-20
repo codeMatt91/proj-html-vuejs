@@ -1,5 +1,5 @@
 <template>
-  <div class="plans">
+  <div class="plans pb-5">
     <div class="container">
       <Heading
         :planstitle="plans.title"
@@ -12,12 +12,14 @@
           v-for="(card, i) in plans.cards"
           :key="i"
         >
-          <h4 class="fw-bold">{{ card.title }}</h4>
+          <h4 class="fw-bold pb-4">{{ card.title }}</h4>
           <div
             id="price"
             class="position-relative d-flex justify-content-center"
           >
-            <div>$</div>
+            <div class="position-relative">
+              <div class="dollar position-absolute">$</div>
+            </div>
             <div id="month-value">
               {{ card.price }}
             </div>
@@ -29,11 +31,9 @@
           <div class="p-2">{{ card.project }} Project</div>
           <div class="p-2">{{ card.storage }} GB Storage</div>
           <div class="p-2">Unlimited Users</div>
-          <a
-            href="#"
-            class="btn btn-white border border-3 text-dark fs-6 fw-bold m-3"
-            >START TODAY</a
-          >
+          <div class="text-center">
+            <a href="#" class="btn btn-white fw-bold m-3">START TODAY</a>
+          </div>
         </div>
       </div>
     </div>
@@ -62,6 +62,17 @@ export default {
 }
 .card {
   width: 23%;
+  a {
+    color: $regent-gray;
+    font-size: 15px;
+    color: $scorpion;
+    border: 2px groove $regent-gray;
+    &:hover {
+      background-color: $yellow-orange;
+      color: white;
+      border: 0 groove $yellow-orange;
+    }
+  }
   #month-value {
     color: $science-blu;
     font-size: 35px;
@@ -82,5 +93,8 @@ export default {
   .month {
     bottom: 10px;
   }
+}
+.dollar {
+  left: -10px;
 }
 </style>
