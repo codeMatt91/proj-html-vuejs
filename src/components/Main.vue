@@ -5,6 +5,7 @@
     <Work :work="dataWork" />
     <Plans :plans="dataPlans" />
     <News :news="dataNews" />
+    <FeedBack :feed="dataFeed"/>
   </main>
 </template>
 
@@ -14,6 +15,7 @@ import Service from "./Service.vue";
 import Work from "./Work.vue";
 import Plans from "./Plans.vue";
 import News from "./News.vue";
+import FeedBack from "./FeedBack.vue";
 
 export default {
   name: "Main",
@@ -23,6 +25,7 @@ export default {
     Work,
     Plans,
     News,
+    FeedBack,
   },
   data() {
     return {
@@ -126,6 +129,25 @@ export default {
           {
             src: "blog-post-6-320x202.jpg",
             heading: "Image Optimization For Your Site",
+          },
+        ],
+      },
+      dataFeed: {
+        title: "What Our Clients Say",
+        tickets: [
+          {
+            img: "testimonials-2.jpg",
+            slogan:
+              "Ability proceeds from a fusion of skills, knowledge, understanding and imagination, consolidated by experience.",
+            name: "Luis Desalvo",
+            role: "CREO TECH",
+          },
+          {
+            img: "testimonials-1.jpg",
+            slogan:
+              "Beauty is when you can appreciate yourself. When you love yourself, that’s when you’re most beautiful.",
+            name: "Shelia McCourtney",
+            role: "ARCHITECT",
           },
         ],
       },
