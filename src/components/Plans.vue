@@ -1,5 +1,5 @@
 <template>
-  <div class="plans pb-5">
+  <div class="plans">
     <div class="container">
       <Heading
         :planstitle="plans.title"
@@ -59,6 +59,8 @@ export default {
 .plans {
   background-image: url("../assets/images/background1.jpg");
   background-size: cover;
+  background-position: center;
+  padding-bottom: 100px;
 }
 .card {
   width: 23%;
