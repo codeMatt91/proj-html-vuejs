@@ -7,6 +7,7 @@
     <News :news="dataNews" />
     <FeedBack :feed="dataFeed" />
     <SliderImg :sliders="dataSlider"/>
+    <FooterTop />
   </main>
 </template>
 
@@ -18,6 +19,7 @@ import Plans from "./Plans.vue";
 import News from "./News.vue";
 import FeedBack from "./FeedBack.vue";
 import SliderImg from "./SliderImg.vue";
+import FooterTop from "./FooterTop.vue";
 
 export default {
   name: "Main",
@@ -29,6 +31,7 @@ export default {
     News,
     FeedBack,
     SliderImg,
+    FooterTop,
   },
   data() {
     return {
