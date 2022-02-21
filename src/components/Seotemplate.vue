@@ -1,7 +1,7 @@
 <template>
   <div class="seo">
-    <div class="container h-100">
-      <Heading :seotitle="seoTitle" :seosub="seoSub" class="my-5" />
+    <div class="container">
+      <Heading :seotitle="seoTitle" :seosub="seoSub" />
       <div class="cards d-flex justify-content-between">
         <div
           class="card text-center border-0 p-5"
