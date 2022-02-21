@@ -5,7 +5,10 @@
         class="header-top d-flex align-items-center justify-content-between pt-3"
       >
         <img src="../assets/images/logo_seo_w_1x.png" alt="logo AvadaSeo" />
-        <Nav :navigations="navigations" />
+        <div class="d-flex align-items-center">
+          <Nav :navigations="navigations" />
+          <a href="#" class="btn btn-orange">GET IN TOUCH NOW</a>
+        </div>
       </div>
       <div class="header-bottom">
         <div class="row">
@@ -56,7 +59,9 @@ header {
   background-repeat: repeat-y;
   color: $t-white;
 }
-
+.header-top .btn {
+  font-size: 15px;
+}
 .header-bottom {
   padding: 300px 0;
 }

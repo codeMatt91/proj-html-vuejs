@@ -27,7 +27,6 @@ export default {
         { link: "#", text: "Where We Work", hasClass: true },
         { link: "#", text: "Careers", hasClass: true },
         { link: "#", text: "News", hasClass: true },
-        { link: "#", text: "GET IN TOUCH NOW", hasClass: true },
       ],
       headingFooter: {
         title: "Start Your Free Consultation",
