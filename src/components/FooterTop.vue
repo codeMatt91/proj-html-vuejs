@@ -1,9 +1,9 @@
 <template>
   <div class="footer-top text-white">
-    <div id="filter" class="py-5">
+    <div id="filter" class="">
       <div class="container">
         <Heading />
-        <div class="d-flex justify-content-center">
+        <div class="button d-flex justify-content-center">
           <a href="#" class="btn btn-orange"> CONTACT US NOW</a>
         </div>
       </div>
@@ -29,5 +29,9 @@ export default {
 }
 #filter {
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+.button {
+  padding-bottom: 70px;
 }
 </style>

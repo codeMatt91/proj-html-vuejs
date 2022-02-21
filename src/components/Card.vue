@@ -1,6 +1,6 @@
 <template>
   <div>
-    <i class="fas fa-road fa-2x pb-3"></i>
+    <i class="fa-2x pb-5" :class="card.icon"></i>
     <h4 class="fw-bold">{{ card.heading }}</h4>
     <div>{{ card.text }}</div>
     <div class="link" v-if="card.link">
@@ -19,7 +19,7 @@ export default {
 <style scoped lang="scss">
 @import "../assets/scss/_vars.scss";
 @import "../assets/scss/_utils.scss";
-
+.fab,
 .fas {
   color: $yellow-orange;
 }

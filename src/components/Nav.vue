@@ -4,7 +4,7 @@
       <li v-for="(navigation, index) in navigations" :key="index">
         <a
           class="text-decoration-none py-3 mx-2"
-          :class="[navigation.hasClass ? 'text-white' : 'text-black']"
+          :class="[navigation ? 'text-white' : 'text-black']"
           href="navigation.link"
           >{{ navigation.text }}</a
         >

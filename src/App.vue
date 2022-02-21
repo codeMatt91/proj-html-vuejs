@@ -2,7 +2,7 @@
   <div>
     <Header :navigations="navs" />
     <Main />
-    <Footer />
+    <Footer :navigations="navs" />
   </div>
 </template>
 

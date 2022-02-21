@@ -6,8 +6,7 @@
     <Plans :plans="dataPlans" />
     <News :news="dataNews" />
     <FeedBack :feed="dataFeed" />
-    <SliderImg :sliders="dataSlider"/>
-    <FooterTop />
+    <SliderImg :sliders="dataSlider" />
   </main>
 </template>
 
@@ -19,7 +18,6 @@ import Plans from "./Plans.vue";
 import News from "./News.vue";
 import FeedBack from "./FeedBack.vue";
 import SliderImg from "./SliderImg.vue";
-import FooterTop from "./FooterTop.vue";
 
 export default {
   name: "Main",
@@ -31,7 +29,6 @@ export default {
     News,
     FeedBack,
     SliderImg,
-    FooterTop,
   },
   data() {
     return {
@@ -39,17 +36,17 @@ export default {
         title: "Meet The New Agency SEO Template From The Avada Team",
         cards: [
           {
-            icon: "fa-road",
+            icon: "fas fa-road",
             heading: "Establish Goals",
             text: "Aliquam non elit lacus. Praesent aliquet, ipsum id scelerisque convallis mi ligula euismod odio vel dictum mi risus a mi.",
           },
           {
-            icon: "fa-video",
+            icon: "fas fa-video",
             heading: "Work With a Team",
             text: "Cras semper auctor aliquam. Sed porta sed lacus sit amet consectetur. Lorem ipsum dolor sit amet consectetur adipisce.",
           },
           {
-            icon: "fa-tint",
+            icon: "fas fa-tint",
             heading: "Get Results",
             text: "Vestibulum scelerisque egestas lectus sit amet molestie. Donec consectetur cursus est sed blandit. Nunc sed risus lacus.",
           },
@@ -59,25 +56,25 @@ export default {
         title: "See Our Top Notch Services",
         cards: [
           {
-            icon: "fa-road",
+            icon: "fab fa-google",
             heading: "Google SEO",
             text: "Vestibulum in lacinia metus. Suspendisse in enim ipsum. Nulla facilisi. Donec ante turpis, dictum sed magna et dapibus faucibus odio.",
             link: true,
           },
           {
-            icon: "fa-video",
+            icon: "fas fa-cog",
             heading: "Brand Strategy",
             text: "Vestibulum in lacinia metus. Suspendisse in enim ipsum. Nulla facilisi. Donec ante turpis, dictum sed magna et dapibus faucibus odio.",
             link: true,
           },
           {
-            icon: "fa-tint",
+            icon: "fas fa-building",
             heading: "Local SEO",
             text: "Vestibulum in lacinia metus. Suspendisse in enim ipsum. Nulla facilisi. Donec ante turpis, dictum sed magna et dapibus faucibus odio.",
             link: true,
           },
           {
-            icon: "fa-tint",
+            icon: "fas fa-chart-bar",
             heading: "SEO Analysis",
             text: "Vestibulum in lacinia metus. Suspendisse in enim ipsum. Nulla facilisi. Donec ante turpis, dictum sed magna et dapibus faucibus odio.",
             link: true,
