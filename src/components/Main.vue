@@ -5,7 +5,8 @@
     <Work :work="dataWork" />
     <Plans :plans="dataPlans" />
     <News :news="dataNews" />
-    <FeedBack :feed="dataFeed"/>
+    <FeedBack :feed="dataFeed" />
+    <SliderImg :sliders="dataSlider"/>
   </main>
 </template>
 
@@ -16,6 +17,7 @@ import Work from "./Work.vue";
 import Plans from "./Plans.vue";
 import News from "./News.vue";
 import FeedBack from "./FeedBack.vue";
+import SliderImg from "./SliderImg.vue";
 
 export default {
   name: "Main",
@@ -26,6 +28,7 @@ export default {
     Plans,
     News,
     FeedBack,
+    SliderImg,
   },
   data() {
     return {
@@ -151,6 +154,14 @@ export default {
           },
         ],
       },
+      dataSlider: [
+        "1-200x202.png",
+        "2-200x202.png",
+        "3-200x202.png",
+        "4-200x202.png",
+        "5-200x202.png",
+        "6-200x202.png",
+      ],
     };
   },
 };
