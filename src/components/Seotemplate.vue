@@ -1,5 +1,5 @@
 <template>
-  <div class="seo">
+  <div id="seo">
     <div class="container">
       <Heading :seotitle="seoTitle" :seosub="seoSub" />
       <div class="cards d-flex justify-content-between">
@@ -56,7 +56,7 @@ export default {
   background-repeat: no-repeat;
   background-position: bottom;
 }
-.seo {
+#seo {
   background-color: $alabaster;
 }
 .fas {

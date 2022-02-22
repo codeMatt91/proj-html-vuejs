@@ -6,7 +6,8 @@
       >
         <img src="../assets/images/logo_seo_w_1x.png" alt="logo AvadaSeo" />
         <div class="d-flex align-items-center">
-          <Nav :navigations="navigations" />
+          <Nav :navigations="navigations" :apply="apply" />
+          <div id="label">APPLY</div>
           <a href="#" class="btn btn-orange">GET IN TOUCH NOW</a>
         </div>
       </div>
@@ -39,7 +40,9 @@ import Nav from "./Nav.vue";
 export default {
   name: "Header",
   data() {
-    return {};
+    return {
+      apply: true,
+    };
   },
   components: {
     Nav,
@@ -64,5 +67,15 @@ header {
 }
 .header-bottom {
   padding: 300px 0;
+}
+#label {
+  position: absolute;
+  right: 640px;
+  top: 52px;
+  color: $yellow-orange;
+  border: 1px solid $yellow-orange;
+  font-size: 12px;
+  padding: 0 4px;
+  border-radius: 4px;
 }
 </style>

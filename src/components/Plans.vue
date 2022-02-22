@@ -1,5 +1,5 @@
 <template>
-  <div class="plans">
+  <div id="plans">
     <div class="container">
       <Heading
         :planstitle="plans.title"
@@ -56,7 +56,7 @@ export default {
 @import "../assets/scss/_vars.scss";
 @import "../assets/scss/_utils.scss";
 
-.plans {
+#plans {
   background-image: url("../assets/images/background1.jpg");
   background-size: cover;
   background-position: center;

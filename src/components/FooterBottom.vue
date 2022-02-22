@@ -1,5 +1,5 @@
 <template>
-  <div class="footer-bottom py-5 text-dark">
+  <div id="footer-bottom" class="py-5 text-dark">
     <div class="container text-center">
       <figure class="pb-4">
         <img src="../assets/images/logo_seo_1x.png" alt="logo avadaseo" />
@@ -47,13 +47,14 @@ export default {
 @import "../assets/scss/_vars.scss";
 @import "../assets/scss/utils.scss";
 
-.footer-bottom a {
+#footer-bottom a {
   color: black;
 }
 .btn:hover {
   color: $yellow-orange;
 }
 .nav,
+a.btn,
 .copyright {
   font-size: 13px;
   color: $regent-gray;

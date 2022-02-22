@@ -1,5 +1,5 @@
 <template>
-  <div class="service text-white">
+  <div id="service" class="text-white">
     <div class="container">
       <Heading
         :servicetitle="this.service.title"
@@ -39,7 +39,7 @@ export default {
 <style scoped lang="scss">
 @import "../assets/scss/_vars.scss";
 @import "../assets/scss/_utils.scss";
-.service {
+#service {
   background-image: url("../assets/images/pattern_background.png");
   background-size: contain;
   background-color: $deep-cove;

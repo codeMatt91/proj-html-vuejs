@@ -21,12 +21,12 @@ export default {
   data() {
     return {
       navs: [
-        { link: "#", text: "Home", hasClass: true },
-        { link: "#", text: "Who We Do", hasClass: true },
-        { link: "#", text: "What We Do", hasClass: true },
-        { link: "#", text: "Where We Work", hasClass: true },
-        { link: "#", text: "Careers", hasClass: true },
-        { link: "#", text: "News", hasClass: true },
+        { link: "#", text: "Home" },
+        { link: "#seo", text: "Who We Do" },
+        { link: "#service", text: "What We Do" },
+        { link: "#work", text: "Where We Work" },
+        { link: "#plans", text: "Careers" },
+        { link: "#news", text: "News" },
       ],
       headingFooter: {
         title: "Start Your Free Consultation",

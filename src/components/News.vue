@@ -1,5 +1,5 @@
 <template>
-  <div class="news pb-5">
+  <div id="news" class="pb-5">
     <div class="container">
       <Heading :newstitle="news.title" />
       <div class="cards d-flex justify-content-between">
@@ -44,7 +44,7 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/scss/_vars.scss";
 @import "../assets/scss/_utils.scss";
-.news {
+#news {
   background-color: $alabaster;
 }
 

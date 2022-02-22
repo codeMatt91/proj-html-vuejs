@@ -1,5 +1,5 @@
 <template>
-  <div class="work pb-5">
+  <div id="work" class="pb-5">
     <div class="container">
       <Heading :worktitle="work.title" :worksub="work.subtitle" />
       <div class="row gy-5">
@@ -26,7 +26,7 @@ export default {
 </script>
 
 <style scoped>
-a{
-   font-size: 15px;
+a {
+  font-size: 15px;
 }
 </style>

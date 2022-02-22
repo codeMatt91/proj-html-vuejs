@@ -1,5 +1,5 @@
 <template>
-  <div class="footer-top text-white">
+  <div id="footer-top" class="text-white">
     <div id="filter" class="">
       <div class="container">
         <Heading />
@@ -22,7 +22,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.footer-top {
+#footer-top {
   background-image: url("../assets/images/CTA-seo-1.jpg");
   background-position: center;
   background-size: cover;
