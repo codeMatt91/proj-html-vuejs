@@ -1,20 +1,15 @@
 <template>
   <div class="slider">
     <div class="container">
-      <div
-        class="partners d-flex justify-content-center py-4 border-top"
-        
-      >
-        <i class="fa fa-angle-left position-relative" @click="next"></i>
+      <div class="partners d-flex justify-content-center py-4 border-top">
         <div class="card-img" v-for="(slider, i) in filteredSliders" :key="i">
           <figure class="d-flex justify-content-center">
-            <img 
+            <img
               :src="require(`../assets/images/clients_partner_${slider}`)"
               alt="logo partner"
             />
           </figure>
         </div>
-        <i class="fa fa-angle-right position-relative" @click="prev"></i>
       </div>
     </div>
   </div>
@@ -26,35 +21,53 @@ export default {
   props: ["sliders"],
   data() {
     return {
-      currentIndex: 0,
+      nextIndex: 3,
+      prevIndex: 0,
     };
   },
   methods: {
-    next() {
-      if (this.currentIndex === this.filteredSliders.length - 1)
-        this.currentIndex = 0;
-      this.currentIndex += 1;
-    },
-    prev() {
-      if (this.currentIndex === 0)
-        this.currentIndex = this.filteredSliders.length - 1;
-      this.currentIndex -= 1;
+    // isActive(i) {
+    //   this.currentIndex = i;
+    // },
+    // next() {
+    //   if (this.currentIndex === this.filteredSliders.length - 1)
+    //     this.currentIndex = 0;
+    //   this.currentIndex += 1;
+    // },
+    // prev() {
+    //   if (this.currentIndex === 0)
+    //     this.currentIndex = this.filteredSliders.length - 1;
+    //   this.currentIndex -= 1;
+    // },
+    myFunction() {
+      if (
+        (this.prevIndex >= 0) & (this.prevIndex <= 3) &&
+        (this.nextIndex >= 3) & (this.nextIndex <= 4)
+      ) {
+        this.prevIndex++;
+        this.nextIndex++;
+      } else {
+        this.prevIndex--;
+        this.nextIndex--;
+      }
     },
   },
   computed: {
     filteredSliders() {
       const sliders = this.sliders;
-      return sliders.filter((el, i) => i <= 3);
+      return sliders.filter(
+        (el, i) => (i >= this.prevIndex) & (i <= this.nextIndex)
+      );
     },
-    // setImg(i) {
-    //   return (this.currentIndex = i);
-    // },
+  },
+  created() {
+    setInterval(this.myFunction, 2000);
   },
 };
 </script>
 
 <style lang="scss" scoped>
 img {
-  width: 50%;
+  width: 40%;
 }
 </style>
