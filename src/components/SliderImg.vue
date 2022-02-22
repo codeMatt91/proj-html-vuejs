@@ -26,19 +26,6 @@ export default {
     };
   },
   methods: {
-    // isActive(i) {
-    //   this.currentIndex = i;
-    // },
-    // next() {
-    //   if (this.currentIndex === this.filteredSliders.length - 1)
-    //     this.currentIndex = 0;
-    //   this.currentIndex += 1;
-    // },
-    // prev() {
-    //   if (this.currentIndex === 0)
-    //     this.currentIndex = this.filteredSliders.length - 1;
-    //   this.currentIndex -= 1;
-    // },
     myFunction() {
       if (
         (this.prevIndex >= 0) & (this.prevIndex <= 3) &&

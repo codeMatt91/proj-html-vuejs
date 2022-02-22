@@ -32,7 +32,4 @@ nav a {
 a:hover {
   color: $yellow-orange;
 }
-li:nth-child(5) a {
-  padding-right: 50px;
-}
 </style>
