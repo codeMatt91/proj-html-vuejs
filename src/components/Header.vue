@@ -64,7 +64,77 @@ header {
 .header-top .btn {
   font-size: 15px;
 }
+.header-top {
+  animation: puff-in-center 1.2s cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+
+@-webkit-keyframes puff-in-center {
+  0% {
+    transform: scale(2);
+    transform: scale(2);
+    filter: blur(4px);
+    filter: blur(4px);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    transform: scale(1);
+    filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes puff-in-center {
+  0% {
+    transform: scale(2);
+    transform: scale(2);
+    filter: blur(4px);
+    filter: blur(4px);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    transform: scale(1);
+    filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
 .header-bottom {
   padding: 300px 0;
+  animation: puff-in-center 1.2s cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+@-webkit-keyframes puff-in-center {
+  0% {
+    transform: scale(2);
+    transform: scale(2);
+    filter: blur(4px);
+    filter: blur(4px);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    transform: scale(1);
+    filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes puff-in-center {
+  0% {
+    transform: scale(2);
+    transform: scale(2);
+    filter: blur(4px);
+    filter: blur(4px);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    transform: scale(1);
+    filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
 }
 </style>
