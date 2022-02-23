@@ -7,12 +7,15 @@
         worktitle ||
         planstitle ||
         newstitle ||
+        pricetitle ||
         "Start Your Free Consultation"
       }}
     </h2>
     <div class="text w-50">
-      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-      doloremque laudantium.
+      {{
+        pricesub ||
+        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium quam dolorumque etiam inch quasum imittere"
+      }}
     </div>
   </div>
 </template>
@@ -20,7 +23,15 @@
 <script>
 export default {
   name: "Heading",
-  props: ["seotitle", "servicetitle", "worktitle", "planstitle", "newstitle"],
+  props: [
+    "seotitle",
+    "servicetitle",
+    "worktitle",
+    "planstitle",
+    "newstitle",
+    "pricetitle",
+    "pricesub",
+  ],
 };
 </script>
 

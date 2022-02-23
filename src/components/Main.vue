@@ -19,6 +19,7 @@ import News from "./News.vue";
 import FeedBack from "./FeedBack.vue";
 import SliderImg from "./SliderImg.vue";
 
+
 export default {
   name: "Main",
   components: {
@@ -29,6 +30,7 @@ export default {
     News,
     FeedBack,
     SliderImg,
+    
   },
   data() {
     return {
@@ -105,6 +107,7 @@ export default {
         ],
       },
       dataPlans: {
+        visible: false,
         title: "Our Plans",
         cards: [
           { title: "Standard", price: 19, project: 5, storage: 5 },
@@ -162,6 +165,7 @@ export default {
         "5-200x202.png",
         "6-200x202.png",
       ],
+      
     };
   },
 };

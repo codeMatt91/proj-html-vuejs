@@ -1,38 +1,45 @@
 <template>
   <div id="plans">
     <div class="container">
-      <Heading
-        :planstitle="plans.title"
-        :planssub="plans.subtitle"
-        class="text-white"
-      />
-      <div class="cards d-flex justify-content-between">
-        <div
-          class="card p-4 text-center bg-white"
-          v-for="(card, i) in plans.cards"
-          :key="i"
-        >
-          <h4 class="fw-bold py-3">{{ card.title }}</h4>
+      <div v-if="plans.visible">
+        <Modal :price="dataModal"></Modal>
+      </div>
+      <div>
+        <Heading
+          :planstitle="plans.title"
+          :planssub="plans.subtitle"
+          class="text-white"
+        />
+        <div class="cards d-flex justify-content-between">
           <div
-            id="price"
-            class="position-relative d-flex justify-content-center py-3"
+            class="card p-4 text-center bg-white"
+            v-for="(card, i) in plans.cards"
+            :key="i"
           >
-            <div class="position-relative">
-              <div class="dollar position-absolute">$</div>
+            <h4 class="fw-bold py-3">{{ card.title }}</h4>
+            <div
+              id="price"
+              class="position-relative d-flex justify-content-center py-3"
+            >
+              <div class="position-relative">
+                <div class="dollar position-absolute">$</div>
+              </div>
+              <div id="month-value">
+                {{ card.price }}
+              </div>
+              <div class="monthly position-relative">
+                <div class="month position-absolute">/monthly</div>
+                <div id="cent">99</div>
+              </div>
             </div>
-            <div id="month-value">
-              {{ card.price }}
+            <div class="p-2">{{ card.project }} Project</div>
+            <div class="p-2">{{ card.storage }} GB Storage</div>
+            <div class="p-2">Unlimited Users</div>
+            <div class="text-center">
+              <a href="#" class="btn btn-white fw-bold m-3" @click="isClicked"
+                >START TODAY</a
+              >
             </div>
-            <div class="monthly position-relative">
-              <div class="month position-absolute">/monthly</div>
-              <div id="cent">99</div>
-            </div>
-          </div>
-          <div class="p-2">{{ card.project }} Project</div>
-          <div class="p-2">{{ card.storage }} GB Storage</div>
-          <div class="p-2">Unlimited Users</div>
-          <div class="text-center">
-            <a href="#" class="btn btn-white fw-bold m-3">START TODAY</a>
           </div>
         </div>
       </div>
@@ -42,12 +49,27 @@
 
 <script>
 import Heading from "./Heading.vue";
+import Modal from "./Modal.vue";
 
 export default {
   name: "Plans",
   props: ["plans"],
   components: {
     Heading,
+    Modal,
+  },
+  data() {
+    return {
+      dataModal: {
+        title: "Il pacchetto celto è : ",
+        subtitle: "ricordati di compilare tutti i campi",
+      },
+    };
+  },
+  methods: {
+    isClicked() {
+      this.plans.visible = true;
+    },
   },
 };
 </script>
