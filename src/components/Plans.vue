@@ -1,9 +1,27 @@
 <template>
   <div id="plans">
     <div class="container">
-      <div v-if="plans.visible">
-        <Modal :price="dataModal"></Modal>
-      </div>
+      <Modal :price="dataModal" v-if="visible" @clicked="close">
+        <form class="w-75 d-flex text-white flex-column">
+          <div class="field">
+            <label for="name">Inserisci il Nome</label>
+            <input id="name" type="text" />
+          </div>
+          <div class="field">
+            <label for="lastname">Inserisci il cognome</label>
+            <input id="lastname" type="text" />
+          </div>
+          <div class="field">
+            <label for="paymant">Inserisci il metodo di pagamento</label>
+            <input id="paymant" type="text" />
+          </div>
+          <div class="field">
+            <label for="card">Inserisci il numero di carta</label>
+            <input id="card" type="number" />
+          </div>
+        </form>
+      </Modal>
+
       <div>
         <Heading
           :planstitle="plans.title"
@@ -36,9 +54,13 @@
             <div class="p-2">{{ card.storage }} GB Storage</div>
             <div class="p-2">Unlimited Users</div>
             <div class="text-center">
-              <a href="#" class="btn btn-white fw-bold m-3" @click="isClicked"
-                >START TODAY</a
+              <button
+                href=""
+                class="btn btn-primary fw-bold m-3"
+                @click="isClicked"
               >
+                START TODAY
+              </button>
             </div>
           </div>
         </div>
@@ -60,6 +82,7 @@ export default {
   },
   data() {
     return {
+      visible: false,
       dataModal: {
         title: "Il pacchetto celto è : ",
         subtitle: "ricordati di compilare tutti i campi",
@@ -68,8 +91,11 @@ export default {
   },
   methods: {
     isClicked() {
-      this.plans.visible = true;
+      this.visible = true;
     },
+    close(){
+      this.visible = false;
+    }
   },
 };
 </script>
@@ -120,5 +146,10 @@ export default {
 }
 .dollar {
   left: -10px;
+}
+.field {
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
 }
 </style>

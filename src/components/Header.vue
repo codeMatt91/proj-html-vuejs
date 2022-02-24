@@ -64,6 +64,7 @@ header {
 .header-top .btn {
   font-size: 15px;
 }
+
 .header-top {
   animation: puff-in-center 1.2s cubic-bezier(0.47, 0, 0.745, 0.715);
 }
